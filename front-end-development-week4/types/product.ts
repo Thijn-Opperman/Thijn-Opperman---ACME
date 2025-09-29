@@ -4,4 +4,8 @@ export type productType = {
   price: number;
   description: string;
   image: string;
+  category: string;
 };
+
+export type CreateProductType = Omit<productType, 'id'>;
+export type UpdateProductType = Partial<CreateProductType>;

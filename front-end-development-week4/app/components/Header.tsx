@@ -22,6 +22,9 @@ export default function Header() {
             <Link href="/contact" className="hover:text-indigo-600 dark:hover:text-indigo-400">
               Contact
             </Link>
+            <Link href="/admin" className="hover:text-indigo-600 dark:hover:text-indigo-400">
+              Admin
+            </Link>
           </nav>
         </div>
       </div>

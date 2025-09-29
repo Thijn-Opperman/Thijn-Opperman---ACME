@@ -7,7 +7,7 @@ import { productType } from "../../types/product";
 import { truncate, formatPrice } from "../../_lib/scripts";
 
 export default async function ProductsPage() {
-  const response = await fetch("https://fakestoreapi.com/products");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products`);
   const products = (await response.json()) as productType[];
 
   return (

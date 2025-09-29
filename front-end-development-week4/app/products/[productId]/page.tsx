@@ -19,7 +19,7 @@ export default async function ProductDetailPage({
     return <NoProduct issue="The provided url has an invalid format." />;
   }
 
-  const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/products/${id}`);
 
   // If API says not found, show a simple fallback
   if (!response.ok) {
